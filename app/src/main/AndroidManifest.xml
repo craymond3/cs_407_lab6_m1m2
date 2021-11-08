@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lab6milestone1">
+
+    <!--add permissions!! -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 7.Since you're going to use internet in your app (for downloading maps), now's also a good time to declare that permission in your Manifest:-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Lab6Milestone1">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBMTrMz4MyUsX95hqZbHX63jaLCRDiGh8A" />
+            <!-- 6. Go ahead and try to run your app. If all goes well, it should.... crash. That's because we didn't insert our API key anywhere in the app, and Google requires that we do to display Google Maps in our app (Here’s (Links to an external site.) a more detailed discussion on this).
+            To do so, open Manifest.xml and add in the following, replacing YOUR_API_KEY with the key you have:-->
+    </application>
+
+</manifest>
